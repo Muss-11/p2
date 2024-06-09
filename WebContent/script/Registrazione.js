@@ -2,47 +2,28 @@
  * 
  */
 function checkNomeCognome(inputtxt) {
-	var nome = /^[A-Za-z]+$/;
-	if(inputtxt.value.match(nome)) 
-		return true
-
-	return false;	
+    var nome = /^[A-Za-z]+$/;
+    return nome.test(inputtxt.value);
 }
-
 
 function checkEmail(inputtxt) {
-	var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-	if(inputtxt.value.match(email)) 
-		return true;
-	
-	return false;	
+    var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return email.test(inputtxt.value);
 }
-
 
 function checkData(inputtxt) {
-	var data =  /^\d{1,2}-\d{1,2}-\d{4}$/;
-	if(inputtxt.value.match(data)) 
-		return true;
-	
-	return false;	
+    var data = /^\d{1,2}-\d{1,2}-\d{4}$/;
+    return data.test(inputtxt.value);
 }
-
 
 function checkUserName(inputtxt) {
-	var userName = /^[A-Za-z0-9]+$/;
-	if(inputtxt.value.match(userName)) 
-		return true;
-	
-	return false;	
+    var userName = /^[A-Za-z0-9]+$/;
+    return userName.test(inputtxt.value);
 }
 
-
 function checkPassword(inputtxt) {
-	var password = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-	if(inputtxt.value.match(password)) 
-		return true;
-	
-	return false;	
+    var password = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    return password.test(inputtxt.value);
 }
 
 
